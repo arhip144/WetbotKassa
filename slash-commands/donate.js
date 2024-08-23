@@ -18,7 +18,7 @@ module.exports = {
             nameLocalizations: {
                 'ru': 'рубли'
             },
-            description: 'Amount of russian rubbles',
+            description: 'Amount of russian rubles',
             descriptionLocalizations: {
                 'ru': `Количество руских рублей`
             },

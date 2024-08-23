@@ -70,18 +70,18 @@ app.post('/donate', async (req, res) => {
         if (!guild) return
         const member = await guild.members.fetch(payment.metadata.userID).catch(e => null)
         if (!member) return
-        if (config.currencyPerRubble) {
+        if (config.currencyPerRuble) {
             const response = await axios({
                 url: `https://www.wetbot.space/api/guilds/${guild.id}/users/${member.user.id}`,
                 method: "patch",
                 data: {
-                    currency: donateAmount * config.currencyPerRubble,
+                    currency: donateAmount * config.currencyPerRuble,
                 },
                 headers: {
                     Authorization: process.env.wetbotApiKey
                 }
             })
-            if (response.status === 200) console.log(`Выдано ${donateAmount * config.currencyPerRubble} валюты пользователю ${member.user.id}`)
+            if (response.status === 200) console.log(`Выдано ${donateAmount * config.currencyPerRuble} валюты пользователю ${member.user.id}`)
             else console.error(response)    
         }
         if (config.giveItems && config.items?.length) {
