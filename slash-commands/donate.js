@@ -60,7 +60,7 @@ module.exports = {
                 return_url: "https://wetbot.space/invite"
             },
             capture: true,
-            test: true
+            test: false
         }
         const query = {
             url: `https://api.yookassa.ru/v3/payments`,

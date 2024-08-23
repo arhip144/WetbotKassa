@@ -1,0 +1,2 @@
+echo %CD%
+npm start

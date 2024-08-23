@@ -2,6 +2,7 @@ require('dotenv').config()
 const express = require('express')
 const app = express()
 const http = require("http")
+const https = require("https")
 const axios = require('axios');
 const config = require("./botconfig")
 const localtunnel = require('localtunnel')
@@ -42,9 +43,14 @@ if (!config.hasWhiteIp) {
             console.log(`Туннель закрыт`)
         });
     })();
+    http.createServer(app).listen(80)
+} else {
+    https.createServer({
+        key: config.key,
+        cert: config.sert,
+        ca: config.ca?.length ? config.ca : undefined,
+    }, app).listen(443);
 }
-
-http.createServer(app).listen(80)
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))

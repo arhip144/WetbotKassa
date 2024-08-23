@@ -4,8 +4,11 @@ module.exports = {
     email: "",
     shopId: "",
     hasWhiteIp: false,
+    key: "",
+    sert: "",
+    ca: "",
     currencyPerRubble: 100, //Выдавать 100 валюты за каждый рубль (Оставьте 0, если не хотите выдавать валюту)
-    giveItems: true, //Выдать предметы (Если не хотите выдавать, поставьте значение false, вместо true)
+    giveItems: false, //Выдать предметы (Если не хотите выдавать, поставьте значение false, вместо true)
     items: [
         {
             itemID: "lxobim9a", //ID первого предмета

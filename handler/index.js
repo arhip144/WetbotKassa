@@ -13,7 +13,7 @@ module.exports = async (client) => {
             absolute: true
         })
         const arrayOfSlashCommands = [];
-        await slashCommands.map(async (value) => {
+        slashCommands.map(async (value) => {
             const file = require(value);
             if (!file?.name) return;
             client.slashCommands.set(file.name, file);
@@ -30,7 +30,7 @@ module.exports = async (client) => {
         const eventFiles = glob.sync(`events/*.js`, {
             absolute: true
         })
-        await eventFiles.map((value) => {
+        eventFiles.map((value) => {
             require(value)
         });
         console.timeEnd("Successfully loaded events")
