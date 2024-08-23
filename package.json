@@ -1,0 +1,21 @@
+{
+  "name": "wetbotkassa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "AnthonyVault",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.4",
+    "discord.js": "^14.15.3",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "glob": "^11.0.0",
+    "localtunnel": "^2.0.2",
+    "uniqid": "^5.4.0"
+  }
+}

@@ -34,6 +34,6 @@ module.exports = async (client) => {
             require(value)
         });
         console.timeEnd("Successfully loaded events")
-        //await client.application.commands.set(arrayOfSlashCommands);
+        await client.application.commands.set(arrayOfSlashCommands);
     });
 };
