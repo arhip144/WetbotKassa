@@ -20,7 +20,7 @@ module.exports = {
             },
             description: 'Amount of russian rubles',
             descriptionLocalizations: {
-                'ru': `Количество руских рублей`
+                'ru': `Количество русских рублей`
             },
             type: ApplicationCommandOptionType.Integer,
             min_value: 1,
